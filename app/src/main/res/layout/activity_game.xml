@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#2E7D32"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/puzzle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="#FF8F00"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:id="@+id/options"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <TextView
+                    android:id="@+id/optionOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#6A1B9A"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    android:clickable="true"
+                    android:onClick="checkAnswer"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/optionTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_gravity="clip_horizontal|clip_vertical"
+                    android:background="#AD1457"
+                    android:foregroundGravity="clip_horizontal|clip_vertical"
+                    android:gravity="clip_horizontal|center|clip_vertical|center_horizontal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    android:clickable="true"
+                    android:onClick="checkAnswer"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <TextView
+                    android:id="@+id/optionThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#AD1457"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    android:clickable="true"
+                    android:onClick="checkAnswer"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/optionFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="clip_horizontal|clip_vertical"
+                    android:background="#6A1B9A"
+                    android:foregroundGravity="clip_horizontal|clip_vertical"
+                    android:gravity="clip_horizontal|center|clip_vertical|center_horizontal"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    android:clickable="true"
+                    android:onClick="checkAnswer"
+                    android:textStyle="bold" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
